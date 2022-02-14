@@ -1,0 +1,98 @@
+@font-face{
+  font-family: "EspressoDolce";
+  src: url("./Assets/espressodolce-webfont.woff") format("woff"),
+    url("./Assets/espressodolce-webfont.woff2") format("woff2");
+}
+
+body {
+  font-family: "EspressoDolce", Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.background-image {
+  background: url("./Assets/allavengers.jpg") no-repeat center left fixed;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+}
+
+.rectangle {
+  background: rgba(255, 255, 255, 0.6);
+  width: 90%;
+  border-radius: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+ 
+}
+.super {
+  width: 30%;
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  margin:10px;
+  padding: 5px;
+}
+.segment40 {
+  background: #ffffff;
+  width: 40%;
+  border-radius: 10%;
+  display: flex;
+  position: relative;
+}
+.circle {
+  background-color: rgba(255, 0, 0, 0.6);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color:#ffffff;
+}
+.newsegment {
+  background: #ffffff;
+  width: 60%;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.profile {
+  border-radius: 50%;
+  width: 95%;
+}
+
+.title {
+  color: red;
+  font-size: large;
+  margin: 0px 0px 0px 0px;
+}
+.paragraph {
+  color: darkgray;
+  font-size: medium;
+}
+
+@media (min-width: 700px) and (max-width: 1399px){
+    .super{
+        width: 30%;
+    }
+}
+@media (max-width:699px){
+    .super{
+        width: 80%;
+    }
+    .background-image{
+        padding: 0;
+    }
+    .rectangle{
+        width: 98%;
+    }
+}
