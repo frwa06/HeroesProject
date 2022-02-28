@@ -21,12 +21,22 @@ body {
 .rectangle {
   background: rgba(255, 255, 255, 0.6);
   width: 90%;
-  border-radius: 10%;
+  padding: 20px;
+  border-radius: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: space-around;
  
+}
+button{
+  margin: 0%;
+  padding: 0%;
+  border: none;
+  background: none;
+  display:flex; 
+  justify-items: center;
+  cursor:pointer;
 }
 .super {
   width: 30%;
@@ -36,6 +46,7 @@ body {
   margin:10px;
   padding: 5px;
 }
+
 .segment40 {
   background: #ffffff;
   width: 40%;
@@ -63,6 +74,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding-top: 30px;
 }
 
 .profile {
@@ -79,6 +91,9 @@ body {
   color: darkgray;
   font-size: medium;
 }
+
+
+
 
 @media (min-width: 700px) and (max-width: 1399px){
     .super{

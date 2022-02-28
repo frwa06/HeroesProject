@@ -1,9 +1,12 @@
 import { Super } from "./Super";
-import { useState, useEffect } from "react";
-import { increment } from "../Features/counter/counterSlice";
+//import { useState, useEffect } from "react";
+//import { increment } from "../Features/counter/HeroeSlice";
+import { useSelector } from "react-redux";
 
 export const Rectangle = () => {
-  const [Heroe, setHeroe] = useState([]);
+  const heroe= useSelector((state) => state.heroe.heroe)
+
+  /*const [Heroe, setHeroe] = useState([]);
 
   useEffect(() => {
     fetch("https://udem.herokuapp.com/heroes", {
@@ -13,11 +16,11 @@ export const Rectangle = () => {
       .then((heroes) => {
         setHeroe(heroes);
       });
-  }, []);
+  }, []);*/
 
   return (
     <div className="rectangle">
-      {Heroe.map((h, index)=> <Super position={++index} key={index} Heroe={h}></Super>)}
+      {heroe.map((h, index)=> <Super position={++index} key={index} Heroe={h}></Super>)}
     </div>
     
     );

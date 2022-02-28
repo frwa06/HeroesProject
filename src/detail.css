@@ -1,0 +1,112 @@
+@font-face{
+    font-family: "EspressoDolce";
+    src: url("./Assets/espressodolce-webfont.woff") format("woff"),
+      url("./Assets/espressodolce-webfont.woff2") format("woff2");
+  }
+  
+  body {
+    font-family: "EspressoDolce", Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .background-image {
+    background: url("./Assets/allavengers.jpg") no-repeat center left fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  .frame {
+    background: rgba(255, 255, 255, 0.452);
+    border-radius: 20px;
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+   
+  }
+
+  .detail {
+    background-image: radial-gradient(circle, rgba(0,249,255,1) 39%, rgba(51,56,57,1) 96%);
+    border-radius: 20px;
+    border: 2.5px solid black;  
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-bottom: 0px;
+    align-items:center;
+  }
+  .options{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width:100%
+    
+  }
+  .detail1{
+    background-color: #fffb1600;
+    border-radius: 10px;
+    border: 3px solid #fffb0077;
+    color: aliceblue;
+    cursor:pointer;
+  }
+  .detail1:hover{
+    color: #fffb16;
+    
+  }
+  .date {
+    background: #fffb16;
+    border: 2.5px solid black;
+    width: 99.99%;
+    height: 100px;
+    border-radius: 20px;
+    display: flex;
+    justify-content:space-evenly;
+    
+  }
+  
+  .profile2 {
+    border-radius: 50%;
+    width: 20%;
+    border: 2.5px solid rgb(107, 18, 18);
+    
+   }
+
+ 
+  
+  .title1 {
+    color: red;
+    font-size: xx-large;
+    margin: 25px 0px 0px 0px;
+  }
+  .paragraph1 {
+    color: rgb(251, 255, 0);
+    font-size: large;
+    margin: 0px 0px 25px 0px;
+  }
+  .subtext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+  }
+  .title2 {
+    color: red;
+    font-size:x-large;
+    margin: 20px 0px 0px 0px;
+  }
+  .paragraph2 {
+    color: rgb(0, 0, 0);
+    font-size: medium;
+    margin: 0px 0px 25px 0px;
+  }
+  
