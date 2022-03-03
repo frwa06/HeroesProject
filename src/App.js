@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './style.css';
 import { Rectangle } from './Mycomponent/Rectangle';
 import { Detail } from './Detail';
-import './detail.css'
+import './detail.css';
+
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/home" element={<Rectangle />} />
-          <Route path="/detail" element={<Detail />} />
+          <Route path="/detail/:heroeId" element={<Detail />} />
         </Routes>
      
       </BrowserRouter>

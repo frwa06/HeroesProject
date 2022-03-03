@@ -1,5 +1,6 @@
 import React from 'react';
 export const Segment40 = (props) => {
+    
     return(
         <div className="segment40">
             <img
@@ -7,7 +8,7 @@ export const Segment40 = (props) => {
                 className="profile"
                 alt=""
             />
-            <div className="circle">{props.position} </div>    
+            <div className="position">{props.position} </div>    
 
         </div>
 

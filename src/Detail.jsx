@@ -1,7 +1,14 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
+
+
 
 export const Detail = () => {
+  const heroe= useSelector((state) => state.heroe.heroe);
+  const {heroeId} = useParams();
+  const heroeSelected = heroe[parseInt(heroeId)];
+  
   const navigate = useNavigate();
   const returnHome = () => {
     navigate("/home");
@@ -17,19 +24,19 @@ export const Detail = () => {
           </button>
         </span>
         <img
-          srcSet="http://i.annihil.us/u/prod/marvel/i/mg/6/a0/55b6a25e654e6/standard_xlarge.jpg"
+          srcSet={heroeSelected._picture}
           className="profile2"
           alt=""
         />
-        <h1 className="title1">Iron Man</h1>
+        <h1 className="title1">{heroeSelected._nickname}</h1>
         <p className="paragraph1">Heroe</p>
         <div className="date">
           <div className="subtext">
-            <h1 className="title2">Tony Starr</h1>
+            <h1 className="title2">{heroeSelected._name}</h1>
             <p className="paragraph2">Nombre</p>
           </div>
           <div className="subtext">
-            <h1 className="title2">1.55</h1>
+            <h1 className="title2">{heroeSelected._height}</h1>
             <p className="paragraph2">Estatura</p>
           </div>
         </div>

@@ -4,16 +4,17 @@ import { Newsegment } from "./Newsegment";
 import { useNavigate } from "react-router-dom";
 
 
-export const Super =({Heroe, position}) => {
+export const Super =({Heroe,position}) => {
+  
   const navigate = useNavigate();
   const goToDetail =()=>{
-    navigate('/detail');
+    navigate('/detail/'+ position);
   }  
   
   return (
     <div className="super">
       <button className="lookat" onClick={goToDetail}>
-        <Segment40 srcImage={Heroe._picture} position={position}></Segment40>
+        <Segment40 srcImage={Heroe._picture} position={position + 1}></Segment40>
         <Newsegment
           superName={Heroe._nickname}
           realName={Heroe._name}

@@ -3,6 +3,7 @@ import { Super } from "./Super";
 //import { increment } from "../Features/counter/HeroeSlice";
 import { useSelector } from "react-redux";
 
+
 export const Rectangle = () => {
   const heroe= useSelector((state) => state.heroe.heroe)
 
@@ -20,7 +21,7 @@ export const Rectangle = () => {
 
   return (
     <div className="rectangle">
-      {heroe.map((h, index)=> <Super position={++index} key={index} Heroe={h}></Super>)}
+      {heroe.map((h,index)=> <Super position={index} key={index} Heroe={h}></Super>)}
     </div>
     
     );
