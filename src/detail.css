@@ -44,13 +44,14 @@
     padding-top: 30px;
     padding-bottom: 0px;
     align-items:center;
+    
   }
   .options{
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    width:100%
-    
+    width:100%;
+    padding-right: 10px;
   }
   .detail1{
     background-color: #fffb1600;
@@ -58,6 +59,15 @@
     border: 3px solid #fffb0077;
     color: aliceblue;
     cursor:pointer;
+  }
+  .detail2{
+    background-color: #fffb1600;
+    border-radius: 10px;
+    border: 3px solid #fffb0077;
+    color: aliceblue;
+    cursor:pointer;
+    
+    
   }
   .detail1:hover{
     color: #fffb16;
@@ -80,10 +90,17 @@
     border: 2.5px solid rgb(107, 18, 18);
     
    }
+   input{
+    border: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+     background-color:transparent;
+     font-family: "EspressoDolce", Arial, sans-serif;
+     font-weight: normal;
+     font-style: normal;
+   }
 
- 
-  
-  .title1 {
+
+   .title1 {
     color: red;
     font-size: xx-large;
     margin: 25px 0px 0px 0px;
@@ -97,6 +114,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding-top: 10px;
   }
   .title2 {

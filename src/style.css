@@ -29,7 +29,7 @@ body {
   align-content: space-around;
  
 }
-button{
+.button{
   margin: 0%;
   padding: 0%;
   border: none;
@@ -37,6 +37,7 @@ button{
   display:flex; 
   justify-items: center;
   cursor:pointer;
+  width: 100%;
 }
 .super {
   width: 30%;

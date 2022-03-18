@@ -13,12 +13,12 @@ export const Super =({Heroe,position}) => {
   
   return (
     <div className="super">
-      <button className="lookat" onClick={goToDetail}>
+      <button className="button" onClick={goToDetail}>
         <Segment40 srcImage={Heroe._picture} position={position + 1}></Segment40>
         <Newsegment
           superName={Heroe._nickname}
           realName={Heroe._name}
-          stature={Heroe._heigth}
+          stature={Heroe._height}
         ></Newsegment>
       </button>
     </div>

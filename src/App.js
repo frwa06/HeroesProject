@@ -14,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/home" element={<Rectangle />} />
           <Route path="/detail/:heroeId" element={<Detail />} />
+   
         </Routes>
      
       </BrowserRouter>
