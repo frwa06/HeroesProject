@@ -1,9 +1,11 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
+import { editHeroe, deleteHeroe } from "./Features/counter/HeroeSlice";
 
 export const Detail = () => {
   const heroe = useSelector((state) => state.heroe.heroe);
+  const dispatch=useDispatch();
   const { heroeId } = useParams();
 
   const [heroeSelected, setHereoSelected] = useState(heroe[parseInt(heroeId)]);
@@ -31,8 +33,15 @@ export const Detail = () => {
 
   };
   const save = () =>{
-    setEditing(false)
+    setEditing(false);
+    dispatch(editHeroe({index: heroeId, heroe: heroeSelected}))
+
   };
+  const deleteHeroes =()=>{
+    dispatch(deleteHeroe({index: heroeId}));
+    returnHome();
+
+  }
 
 
   return (
@@ -44,7 +53,7 @@ export const Detail = () => {
             <button className="detail1" onClick={edit}>
               Editar
             </button>
-            <button className="detail1">Eliminar</button>
+            <button className="detail1" onClick={deleteHeroes}>Eliminar</button>
             <button className="detail1" onClick={returnHome}>
               Regresar
             </button>

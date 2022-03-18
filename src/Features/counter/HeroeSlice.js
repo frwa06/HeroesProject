@@ -70,17 +70,23 @@ export const heroeSlice = createSlice({
     ],
   },
   reducers: {
-    increment: (state) => {
-      state.value += 1;
+    editHeroe:(state, action)=>{
+      const{heroe, index}=action.payload;
+      const newHeroe = [...state.heroe];
+      newHeroe[index]={...heroe};
+
+      return {...state, heroe: newHeroe}
     },
-    decrement: (state) => {
-      state.value -= 1;
-    },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
-    },
-  },
+  
+    deleteHeroe:(state, action)=>{
+      const {index: indexId}=action.payload;
+    const newHeroeDelete = state.heroe.filter((heroe, index)=>index != indexId)
+
+    return{...state, heroe:newHeroeDelete}
+    
+  }
+ },
 });
 
-export const { increment, decrement, incrementByAmount } = heroeSlice.actions;
+export const {editHeroe, deleteHeroe} = heroeSlice.actions;
 export default heroeSlice.reducer;
